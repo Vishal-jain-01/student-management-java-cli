@@ -8,7 +8,7 @@ while True:
         print("Thank you")
         break
     if user_pick not in options:
-        break
+        continue
     random_number = random.choice(options)
     computer_pick= random_number
     print("Computer pick",computer_pick+".")
