@@ -1,4 +1,5 @@
 import random
+from playsound import playsound
 user_win =0
 computer_win =0
 options = ["Snake","Gun", "Water"]
