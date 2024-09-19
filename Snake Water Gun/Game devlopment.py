@@ -29,7 +29,7 @@ while True:
     
     else:
         print("Computer win")
-        
+         break
         computer_win +=1
     
 print("You won",user_win,"times")
