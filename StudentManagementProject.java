@@ -13,7 +13,7 @@ import java.util.*;
             this.Marks= Marks;
         }
         public String toString(){
-            return "RollNumber "+ RollNumber + " Name " + Name + " Marks " + Marks;
+            return " RollNumber "+ RollNumber + " Name " + Name + " Marks " + Marks;
         }
     }
     
@@ -49,10 +49,10 @@ import java.util.*;
                 break;
                 case 5 : DeleteStudent(scanner);
                 break;
-                case 6 : System.out.println("Exiting.... Thank You ! ");
+                case 6 : System.out.println(" Exiting.... Thank You ! ");
                 System.exit(0);
                 break;
-                default : System.out.println("Invalid choice ! Choose a valid choice ");
+                default : System.out.println(" Invalid choice ! Choose a valid choice ");
                 break;
 
             }
@@ -67,16 +67,16 @@ import java.util.*;
             System.out.println("Enter Student Marks : ");
             int Marks= scanner.nextInt();
             students.add(new Student(RollNumber, Name, Marks));
-            System.out.println("Student"+ Name + "Added Successfully");
+            System.out.println(" Student "+ Name + " Added Successfully ");
             return;
         }
         public static void viewStudent(){
             if(students.isEmpty()){
-                System.out.println("No Students found yet");
+                System.out.println(" No Students found yet ");
                 return;
             }
             else{
-                System.out.println("Students List : ");
+                System.out.println(" Students List : ");
                 for(Student student: students){
                     System.out.println(student);
                 }
@@ -87,43 +87,43 @@ import java.util.*;
 
 
         public static void SearchStudentbyrollNumber(Scanner scanner){
-            System.out.println("Enter Student Roll Number");
+            System.out.println(" Enter Student Roll Number ");
             int RollNumber= scanner.nextInt();
             for(Student student : students){
                 if(student.RollNumber== RollNumber){
-                    System.out.println("Student Found : " +student);
+                    System.out.println(" Student Found :  " +student);
                     return;
                 }
             }
-            System.out.println( " Student Not Found");
+            System.out.println( " Student Not Found ");
 
         }
 
         public static void UpdateStudent(Scanner scanner){
-            System.out.println("Enter Student RollNumber");
+            System.out.println(" Enter Student RollNumber ");
             int rollnumber=scanner.nextInt();
             scanner.nextLine();
             for(Student student: students){
                 if(student.RollNumber==rollnumber){
-                    System.out.println("ENter New Name of the Student ");
+                    System.out.println(" ENter New Name of the Student ");
                     String name= scanner.nextLine();
-                    System.out.println("Enter new Marks");
+                    System.out.println(" Enter new Marks ");
                     int marks= scanner.nextInt();
 
                     student.Name=name;
                     student.Marks=marks;
 
-                    System.out.println("Student Updated Successfully");
+                    System.out.println(" Student Updated Successfully ");
                     return;
 
                 }
-                System.out.println("Student Not Found");
+                System.out.println(" Student Not Found ");
             }
 
         }
 
         public static void DeleteStudent(Scanner scanner){
-            System.out.println("Enter the Student RollNumber");
+            System.out.println(" Enter the Student RollNumber ");
             int rollnumber=scanner.nextInt();
             Iterator<Student> iterator=students.iterator();
 
@@ -131,12 +131,12 @@ import java.util.*;
                 Student student=iterator.next();
                 if(student.RollNumber==rollnumber){
                     iterator.remove();
-                    System.out.println("Student deleted successfully");
+                    System.out.println(" Student deleted successfully ");
                     return;
                 }
                 
             }
-            System.out.println("Student Not Found");
+            System.out.println(" Student Not Found ");
             
         }
 
